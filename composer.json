@@ -1,33 +1,40 @@
 {
-	"name": "wp-media/package-template",
+	"name": "pmoranc/plugin-link-crawl",
 	"description": "Repository template for our packages",
-	"homepage": "https://github.com/wp-media/package-template",
+	"homepage": "https://github.com/pmoranc/plugin-link-crawl",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
-			"name": "WP Media",
-			"email": "contact@wp-media.me",
+			"name": "Pablo Morán",
+			"email": "pablomoranc@gmail.com",
 			"homepage": "https://wp-media.me"
 		}
 	],
 	"type": "library",
 	"config": {
-		"sort-packages": true
+		"sort-packages": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	},
 	"support": {
-		"issues": "https://github.com/wp-media/package-template/issues",
-		"source": "https://github.com/wp-media/package-template"
+		"issues": "https://github.com/pmoranc/plugin-link-crawl/issues",
+		"source": "https://github.com/pmoranc/plugin-link-crawl"
 	},
 	"require-dev": {
-		"php": "^5.6 || ^7",
+		"php": "^7.2 || ^7.4",
 		"brain/monkey": "^2.0",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
 		"phpcompatibility/phpcompatibility-wp": "^2.0",
 		"phpunit/phpunit": "^5.7 || ^7",
 		"wp-coding-standards/wpcs": "^2",
-		"wp-media/phpunit": "dev-master"
+		"wp-media/phpunit": "dev-develop"
 	},
-	"autoload": {},
+	"autoload": {
+		"psr-4": {
+			"LinkCrawl\\": "src/"
+		}
+	},
 	"autoload-dev": {},
 	"scripts": {
 		"test-unit": "\"vendor/bin/wpmedia-phpunit\" unit path=Tests/Unit",
