@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( ! empty( $data ) ) { ?>
 		<div style="display: flex; gap: 10px; align-items: center">
 			<h3>Last crawled links</h3>
-			<small><?php echo esc_html( $data[0]->created_date ); ?></small> |
+			<small><?php echo esc_html( $data[0]->created_date ); ?></small> |	
 			<p>Open last <a target="_blank" href="/wp-content/uploads/link_crawl/sitemap.html">Sitemap HTML</a></p> |
 			<p>Open last <a target="_blank" href="/wp-content/uploads/link_crawl/homepage.html">Homepage HTML</a></p>
 		</div>
